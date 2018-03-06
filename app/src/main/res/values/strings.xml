@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">SpendBaiNews</string>
+
+    <!--底部菜单 start-->
+    <string-array name="buttom_array">
+        <!--<item>首页</item>-->
+        <item>新闻</item>
+        <item>信用</item>
+        <item>我的</item>
+    </string-array>
+    <!--底部菜单 end-->
+
+
+    <string name="loading_description">加载中</string>
+    <string name="empty_description">这里还没有内容!</string>
+    <string name="error_description">哎呀！内容出错了！</string>
+    <string name="nonet_description">哎呀！网络似乎出问题了！</string>
+    <string name="error_btn_title">重 试</string>
+    <string name="nonet_btn_title">去设置网络</string>
+</resources>

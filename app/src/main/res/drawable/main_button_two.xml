@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/shop" android:state_checked="true"></item> <!--被选中   -->
+    <item android:drawable="@drawable/shop" android:state_selected="true"></item>   <!--  -->
+    <item android:drawable="@drawable/shop" android:state_pressed="true"></item> <!--单击  -->
+    <item android:drawable="@drawable/shop_d"></item>
+	
+</selector>

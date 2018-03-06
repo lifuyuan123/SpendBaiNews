@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <!--主题相关-->
+    <color name="app_space_bg">#ffe7e7e7</color>
+    <color name="app_text_gray">#7A7A7A</color>
+    <color name="app_theme">#E2564A</color>
+
+    <color name="green">#00bb00</color>
+    <color name="transparent">#00000000</color>
+    <color name="text_gray">#444</color>
+    <color name="app_gray">#4444</color>
+    <color name="white">#FFFFFF</color>
+    <color name="top_bar_normal_bg">#00acff</color>
+    <color name="app_line">#4444</color>
+    <color name="button_normal">#636363</color>
+    <color name="app_btn">#FD8023</color>
+    <color name="uiPrimaryColor">#8a8a8a</color>
+    <color name="vip_color">#f8d67e</color>
+    <color name="underline">#dadada</color>
+    <color name="gray">#bdbdbd</color>
+    <color name="text_color_02">#FF6C6C6C</color>
+    <color name="sort_catagory">#FFE0E0E0</color>
+    <color name="province_line_border">#C7C7C7</color>
+    <color name="split_line_color">#ffc9d1d9</color>
+    <color name="color_text_02">#ff181c20</color>
+    <color name="color_text_01">#ffc5c9ce</color>
+    <color name="input_stock">#ffbdc7d8</color>
+
+
+</resources>

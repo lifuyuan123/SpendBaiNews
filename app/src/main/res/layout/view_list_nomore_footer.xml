@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/bt_morePro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="6dip"
+            android:visibility="visible"
+            android:text="------  END  ------"
+            android:textColor="@color/gray"
+            android:textSize="12dp" />
+
+
+
+</RelativeLayout>

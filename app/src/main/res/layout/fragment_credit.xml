@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <data>
+        <variable
+            name="onclick"
+            type="com.example.lfy.spendbainews.ui.fragment.CreditFragment"/>
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="15dip">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:id="@+id/refreshLayout"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:id="@+id/scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_viewAnimal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:descendantFocusability="blocksDescendants"
+                    android:orientation="vertical">
+
+                     <!--刻度盘-->
+                    <LinearLayout
+                        android:id="@+id/ll_loan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_credit_level"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="15dip">
+
+                        <!--刻度盘-->
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <!--android:background="@drawable/im_credit_vbg"-->
+                            <LinearLayout
+                                android:layout_width="256dip"
+                                android:layout_height="256dip"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center">
+                                <com.example.lfy.spendbainews.ui.view.DashboardView2
+                                    android:layout_marginTop="10dp"
+                                    android:id="@+id/dv_pregress"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                            </LinearLayout>
+
+                            <!--提示积分情况-->
+                            <TextView
+                                android:id="@+id/tv_credit_describe"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="16dp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </RelativeLayout>
+
+
+                        <!--立即借款-->
+                        <TextView
+                               
+                            android:visibility="invisible"
+                            android:layout_marginTop="10dip"
+                            android:id="@+id/bt_loan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@drawable/bg_credit_loan"
+                            android:paddingBottom="5dip"
+                            android:paddingTop="5dip"
+                            android:paddingLeft="20dip"
+                            android:paddingRight="20dip"
+                            android:text="        "
+                            android:textColor="@android:color/white"
+                            android:textSize="18dp" />
+                        <!--描述-->
+                        <TextView
+                            android:id="@+id/tv_describe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dip"
+                            android:text=""
+                            android:textColor="@android:color/white"
+                            android:textSize="16dp" />
+
+                    </LinearLayout>
+
+                    <!--征信列表-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/app_space_bg"
+                        android:orientation="vertical">
+
+                        <!--描述-->
+                        <TextView
+                            android:id="@+id/tv_prompt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="10dip"
+                            android:text=""
+                            android:textColor="@color/app_gray"
+                            android:textSize="14dp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="196dip"
+                            android:background="@color/white">
+
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/rv_credit"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="5dip">
+                            </android.support.v7.widget.RecyclerView>
+
+                            <!--网络出问题-->
+                            <LinearLayout
+                                android:visibility="gone"
+                                android:id="@+id/lin_error"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:src="@drawable/im_nonet"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp" />
+                                <TextView
+                                    android:layout_marginTop="15dp"
+                                    android:id="@+id/tv_error_message"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/nonet_description"
+                                    android:textColor="@color/uiPrimaryColor"
+                                    android:textSize="14dp" />
+                            </LinearLayout>
+
+                            <!--没有内容-->
+                            <LinearLayout
+                                android:visibility="gone"
+                                android:id="@+id/lin_empty"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:src="@drawable/smart_empty"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp" />
+                                <TextView
+                                    android:layout_marginTop="15dp"
+                                    android:id="@+id/tv_empty_message"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/empty_description"
+                                    android:textSize="14dp"
+                                    android:textColor="@color/uiPrimaryColor"/>
+                            </LinearLayout>
+
+                            <!--出错-->
+                            <LinearLayout
+                                android:visibility="gone"
+                                android:id="@+id/lin_emptyerror"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <ImageView
+                                    android:src="@drawable/smart_error"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp" />
+                                <TextView
+                                    android:layout_marginTop="15dp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/error_description"
+                                    android:textSize="14dp"
+                                    android:textColor="@color/uiPrimaryColor"/>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </ScrollView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </RelativeLayout>
+</layout>
+
+

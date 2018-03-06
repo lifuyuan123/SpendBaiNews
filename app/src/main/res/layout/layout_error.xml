@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    >
+ <ImageView
+    android:scaleType="fitXY"
+    android:layout_width="@dimen/x70"
+    android:layout_height="@dimen/x70"
+    android:src="@mipmap/icon_error" />
+    <TextView
+        android:layout_marginTop="@dimen/x10"
+        android:id="@+id/btnReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:background="#e1e0e0"
+        android:padding="@dimen/x5"
+        android:text="点击重试"
+        />
+</LinearLayout>

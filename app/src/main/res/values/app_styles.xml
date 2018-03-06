@@ -1,0 +1,83 @@
+<resources>
+
+
+    <!--输入框前面文本-->
+    <style name="text_promptStyle">
+        <item name="android:textColor">@color/text_gray</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:layout_height">72dip</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:drawablePadding">10dip</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:lines">1</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+
+
+    <!--有背景文本-->
+    <style name="text_Style">
+        <item name="android:textColor">@color/text_gray</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:layout_height">72dip</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:drawablePadding">10dip</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:lines">1</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+
+    <!--没有背景文本-->
+    <style name="text_NobgStyle">
+        <item name="android:textColor">@color/text_gray</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_height">72dip</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:drawablePadding">10dip</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:lines">1</item>
+        <item name="android:padding">5dip</item>
+        <item name="android:background">@null</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+
+
+    <!--提示文字-->
+    <style name="text_alertStyle">
+        <item name="android:textColor">@color/app_gray</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:drawablePadding">10dip</item>
+        <item name="android:lines">1</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <!--点击获取验证码-->
+    <style name="bt_cpStyle">
+        <item name="android:textColor">@color/app_theme</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:minWidth">72dip</item>
+        <item name="android:gravity">center</item>
+        <item name="android:lines">1</item>
+        <item name="android:text">点击获取</item>
+        <item name="android:background">@drawable/bg_ckred_loan</item>
+    </style>
+
+
+    <!--执行按钮-->
+    <style name="bt_goto">
+        <item name="android:textColor">@drawable/title_selector</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:layout_height">45dip</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:lines">1</item>
+        <item name="android:layout_margin">36dip</item>
+        <item name="android:background">@drawable/titlebg_selector</item>
+    </style>
+
+
+</resources>

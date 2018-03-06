@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="click"
+            type="com.example.lfy.spendbainews.ui.actvity.ResetLoginPsActivity"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.example.lfy.spendbainews.ui.view.EaseTitleBar
+            android:id="@+id/ease_titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="true"
+            android:fitsSystemWindows="true"
+            app:titleBarBackground="@color/app_theme"
+            app:titleBarLeftImage="@mipmap/im_close"
+            app:titleBarTitle="重置密码"
+            app:titleBarShowLine="true"
+            >
+
+        </com.example.lfy.spendbainews.ui.view.EaseTitleBar>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_messageLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <EditText
+                        android:id="@+id/et_tel"
+                        android:layout_width="match_parent"
+                        android:layout_height="64dip"
+                        android:layout_marginLeft="15dip"
+                        android:layout_marginRight="15dip"
+                        android:drawableLeft="@mipmap/im_acount"
+                        android:drawablePadding="10dip"
+                        android:gravity="center_vertical"
+                        android:hint="手机号"
+                        android:theme="@style/AppEditText"
+                        android:lines="1"
+                        android:textSize="16sp" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="72dip">
+
+
+                        <EditText
+                            android:id="@+id/et_cp"
+                            android:layout_width="match_parent"
+                            android:layout_height="72dip"
+                            android:layout_marginLeft="15dip"
+                            android:layout_marginRight="15dip"
+                            android:drawableLeft="@mipmap/im_cp"
+                            android:drawablePadding="10dip"
+                            android:theme="@style/AppEditText"
+                            android:gravity="center_vertical"
+                            android:hint="请输入验证码"
+                            android:lines="1"
+                            android:textSize="16sp" />
+
+
+                        <TextView
+                            android:onClick="@{click.onClick}"
+                            android:id="@+id/bt_cp"
+                            android:layout_width="wrap_content"
+                            android:minWidth="72dip"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="17dip"
+                            android:background="@drawable/bg_ckred_loan"
+                            android:gravity="center"
+                            android:text="点击获取"
+                            android:textColor="@color/app_theme"
+                            android:textSize="14sp" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/et_ps"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dip"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:drawableLeft="@mipmap/im_pw"
+                    android:drawablePadding="10dip"
+                    android:gravity="center_vertical"
+                    android:hint="请输入你的密码"
+                    android:theme="@style/AppEditText"
+                    android:lines="1"
+                    android:textSize="16sp" />
+
+
+                <EditText
+                    android:id="@+id/et_cps"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dip"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:drawableLeft="@mipmap/im_pw"
+                    android:drawablePadding="10dip"
+                    android:gravity="center_vertical"
+                    android:hint="请再次输入你的密码"
+                    android:lines="1"
+                    android:theme="@style/AppEditText"
+                    android:textSize="16sp" />
+
+
+                <Button
+                    android:onClick="@{click.onClick}"
+                    android:id="@+id/bt_play"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dip"
+                    android:layout_margin="46dip"
+                    android:background="@drawable/titlebg_selector"
+                    android:text="确定"
+                    android:textColor="@drawable/title_selector" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+</layout>

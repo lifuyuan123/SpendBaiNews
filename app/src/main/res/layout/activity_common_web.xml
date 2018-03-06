@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_space_bg"
+        android:orientation="vertical">
+
+
+        <com.example.lfy.spendbainews.ui.view.EaseTitleBar
+            android:id="@+id/ease_titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="true"
+            android:fitsSystemWindows="true"
+            app:titleBarBackground="@color/app_theme"
+            app:titleBarLeftImage="@mipmap/im_back"
+            app:titleBarShowLine="true"
+            app:titleBarTitle="征信"
+            >
+
+        </com.example.lfy.spendbainews.ui.view.EaseTitleBar>
+
+
+        <LinearLayout
+            android:id="@+id/ll_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <ProgressBar
+                android:visibility="gone"
+                android:id="@+id/pg"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="3dip"
+                android:progress="0"
+                android:max="100"
+                android:progressDrawable="@drawable/pg" />
+
+
+            <com.example.lfy.spendbainews.ui.view.WebViewBase
+                android:id="@+id/x5_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </com.example.lfy.spendbainews.ui.view.WebViewBase>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

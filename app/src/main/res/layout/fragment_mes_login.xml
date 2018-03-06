@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <data></data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="15dip">
+
+        <!--手机号-->
+        <com.example.lfy.spendbainews.ui.view.CleanableEditText
+            android:id="@+id/et_name"
+            style="@style/text_Style"
+            android:layout_marginTop="20dip"
+            android:drawableLeft="@mipmap/im_acount"
+            android:drawableRight="@mipmap/im_et_clear"
+            android:hint="手机号"
+            android:inputType="phone"
+            android:textSize="16dp"
+            android:maxLength="11"
+            android:theme="@style/AppEditText" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_messageLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--图形验证码-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dip">
+
+                <EditText
+                    android:id="@+id/et_imcp"
+                    style="@style/text_Style"
+                    android:textSize="16dp"
+                    android:drawableLeft="@mipmap/im_imcp"
+                    android:hint="请输入图形验证码"
+                    android:theme="@style/AppEditText" />
+
+                <ImageView
+                    android:id="@+id/im_verify"
+                    android:layout_width="84dip"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dip" />
+
+
+            </RelativeLayout>
+
+            <!--短信验证码-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="72dip">
+
+
+                <EditText
+                    android:textSize="16dp"
+                    android:id="@+id/et_cp"
+                    style="@style/text_Style"
+                    android:drawableLeft="@mipmap/im_cp"
+                    android:hint="请输入验证码"
+                    android:inputType="number"
+                    android:theme="@style/AppEditText" />
+
+
+                <TextView
+                    android:textSize="14dp"
+                    android:id="@+id/bt_cp"
+                    style="@style/bt_cpStyle"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="17dip"
+                    android:text="点击获取" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!--联系客服-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dip">
+
+            <TextView
+                android:id="@+id/bt_help"
+                style="@style/text_alertStyle"
+                android:textSize="14dp"
+                android:layout_alignParentRight="true"
+                android:text="收不到短信？请联系客服" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+    <data>
+        <variable
+            name="click"
+            type="com.example.lfy.spendbainews.ui.actvity.OpenLoanActivity"/>
+    </data>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_space_bg"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true">
+
+    <com.example.lfy.spendbainews.ui.view.EaseTitleBar
+        android:id="@+id/ease_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="true"
+        android:fitsSystemWindows="true"
+        app:titleBarBackground="@color/app_theme"
+        app:titleBarLeftImage="@mipmap/im_back"
+        app:titleBarTitle="基本信息">
+
+    </com.example.lfy.spendbainews.ui.view.EaseTitleBar>
+
+    <com.example.lfy.spendbainews.ui.view.BounceScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ease_titlebar"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                style="@style/text_alertStyle"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:padding="10dip"
+                android:textSize="13dp"
+                android:text="填写基本信息开启信用档案"
+                android:textColor="@color/app_theme" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dip"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_promptStyle"
+                    android:layout_width="0dip"
+                    android:layout_weight="2"
+                    android:textSize="18dp"
+                    android:paddingLeft="10dip"
+                    android:text="姓名" />
+
+
+                <EditText
+                    android:onClick="@{click.onClick}"
+                    android:focusable="false"
+                    android:id="@+id/et_uName"
+                    style="@style/text_NobgStyle"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.5"
+                    android:textSize="16dp"
+                    android:hint="请输入您的姓名"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="15dip" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/app_line" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dip"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_promptStyle"
+                    android:layout_width="0dip"
+                    android:layout_weight="2"
+                    android:textSize="18dp"
+                    android:paddingLeft="10dip"
+                    android:text="身份证" />
+
+                <!--com.wallet.bo.wallets.ui.weiget.CleanableEditText-->
+                <!--android:drawableRight="@drawable/im_et_clear"-->
+                <EditText
+                    android:onClick="@{click.onClick}"
+                    android:focusable="false"
+                    android:id="@+id/et_uCard"
+                    style="@style/text_NobgStyle"
+                    android:layout_width="0dip"
+                    android:textSize="16dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.5"
+                    android:hint="请输入您的身份证号码"
+                    android:maxLength="21"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="15dip" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dip"
+                android:layout_marginTop="15dip"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_promptStyle"
+                    android:layout_width="0dip"
+                    android:layout_weight="2"
+                    android:textSize="18dp"
+                    android:paddingLeft="10dip"
+                    android:text="单位名称" />
+
+
+                <EditText
+                    android:id="@+id/et_dwmc"
+                    style="@style/text_NobgStyle"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.5"
+                    android:textSize="16dp"
+                    android:hint="请输入您的单位名称"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="15dip" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/app_line" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dip"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/text_promptStyle"
+                    android:layout_width="0dip"
+                    android:layout_weight="2"
+                    android:textSize="18dp"
+                    android:paddingLeft="10dip"
+                    android:text="常用邮箱" />
+
+
+                <EditText
+                    android:id="@+id/et_uemail"
+                    style="@style/text_NobgStyle"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.5"
+                    android:textSize="16dp"
+                    android:hint="请输入您的邮箱"
+                    android:inputType="textEmailSubject"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="15dip" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:background="@color/app_line" />
+
+
+            <RelativeLayout
+                android:onClick="@{click.onClick}"
+                android:id="@+id/bt_adr"
+                android:layout_width="match_parent"
+                android:layout_height="64dip"
+                android:background="@android:color/white"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/im_adr"
+                    android:layout_width="@dimen/x13"
+                    android:layout_height="@dimen/x13"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dip"
+                    android:src="@mipmap/im_spinner_right" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="64dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_toLeftOf="@id/im_adr"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        style="@style/text_promptStyle"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_weight="2"
+                        android:textSize="18dp"
+                        android:paddingLeft="10dip"
+                        android:text="现居地址" />
+
+
+                    <TextView
+                        android:id="@+id/et_location"
+                        style="@style/text_NobgStyle"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.5"
+                        android:gravity="left"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="15dip" />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="10dip"
+                android:gravity="center_vertical"
+                android:padding="15dip"
+                android:text="*请填写2位紧急联系人，可从通讯录添加"
+                android:textColor="@color/text_color_02"
+                android:textSize="14dp"
+                android:visibility="gone" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dip"
+                android:background="@android:color/white"
+                android:padding="10dip"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/bt_contactOne"
+                    android:layout_width="28dip"
+                    android:layout_height="28dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/im_contact" />
+
+                <EditText
+                    android:id="@+id/et_conNameOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@id/bt_contactOne"
+                    android:background="@null"
+                    android:drawableLeft="@mipmap/im_acount"
+                    android:drawablePadding="8dip"
+                    android:hint="联系人姓名"
+                    android:lines="1"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textSize="16dp" />
+
+
+            </RelativeLayout>
+
+
+            <EditText
+                android:id="@+id/et_conPhoneOne"
+                android:layout_width="match_parent"
+                android:layout_height="64dip"
+                android:layout_toLeftOf="@id/bt_contactOne"
+                android:background="@android:color/white"
+                android:drawablePadding="8dip"
+                android:hint="联系人手机"
+                android:inputType="phone"
+                android:lines="1"
+                android:maxLength="11"
+                android:paddingBottom="10dip"
+                android:paddingLeft="38dip"
+                android:paddingRight="10dip"
+                android:paddingTop="10dip"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="16dp"
+                android:visibility="gone" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="64dip"
+                android:background="@android:color/white"
+                android:padding="10dip"
+                android:visibility="gone">
+
+                <ImageView
+                    android:onClick="@{click.onClick}"
+                    android:id="@+id/bt_contactTwo"
+                    android:layout_width="28dip"
+                    android:layout_height="28dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/im_contact" />
+
+                <EditText
+                    android:onClick="@{click.onClick}"
+                    android:id="@+id/et_conNameTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@id/bt_contactTwo"
+                    android:background="@null"
+                    android:drawableLeft="@mipmap/im_acount"
+                    android:drawablePadding="8dip"
+                    android:hint="联系人姓名"
+                    android:lines="1"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textSize="16dp" />
+
+
+            </RelativeLayout>
+
+
+            <EditText
+                android:id="@+id/et_conPhoneTwo"
+                android:layout_width="match_parent"
+                android:layout_height="64dip"
+                android:layout_toLeftOf="@id/bt_contactTwo"
+                android:background="@android:color/white"
+                android:drawablePadding="8dip"
+                android:hint="联系人手机"
+                android:inputType="phone"
+                android:lines="1"
+                android:maxLength="11"
+                android:paddingBottom="10dip"
+                android:paddingLeft="38dip"
+                android:paddingRight="10dip"
+                android:paddingTop="10dip"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="16dp"
+                android:visibility="gone" />
+
+            <Button
+                android:onClick="@{click.onClick}"
+                android:id="@+id/bt_goto"
+                style="@style/bt_goto"
+                android:text="确认提交" />
+
+
+        </LinearLayout>
+
+    </com.example.lfy.spendbainews.ui.view.BounceScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_keyBoard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/darker_gray"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="46dip"
+            android:orientation="horizontal"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip">
+
+            <LinearLayout
+                android:onClick="@{click.onClick}"
+                android:id="@+id/bt_hideKey"
+                android:layout_width="46dip"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="28dip"
+                    android:gravity="center"
+                    android:layout_height="22dip"
+                    android:src="@mipmap/im_back_black" />
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:focusable="true"
+                android:clickable="true"
+                android:text="请输入您的身份证号"
+                android:textColor="@color/app_gray"
+                android:textSize="16dp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@color/app_line" />
+
+
+        <com.example.lfy.spendbainews.ui.view.MyKeyboardView
+            android:id="@+id/customKeyboard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#e6e6e6"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:keyBackground="@drawable/bg_keyboard_btn"
+            android:keyTextColor="#000000"
+            android:keyTextSize="31dp"
+            android:labelTextSize="23.04dp"
+            android:shadowRadius="0"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</RelativeLayout>
+</layout>

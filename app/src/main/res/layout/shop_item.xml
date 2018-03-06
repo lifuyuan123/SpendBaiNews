@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+    </data>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_marginTop="8dip"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginBottom="5dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+            android:layout_marginTop="5dip"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="10dip"
+            android:id="@+id/im_shop"
+            android:layout_width="70dip"
+            android:layout_height="70dip" />
+
+
+            <LinearLayout
+                android:layout_marginTop="5dip"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                    android:id="@+id/tv_pName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dip"
+                    android:text="拍拍贷"
+                    android:maxEms="6"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textColor="@android:color/black"
+                    android:textSize="18dp" />
+
+                   <TextView
+                       android:id="@+id/tv_count"
+                       android:textSize="14dp"
+                       android:singleLine="true"
+                       android:ellipsize="end"
+                       android:text="1233人已放款"
+                       android:layout_marginRight="5dip"
+                       android:gravity="right"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/lin_borrow"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:textSize="14dp"
+                        android:text="借款额度："
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <!--借款额度-->
+                    <TextView
+                        android:id="@+id/tv_borrowing_limit"
+                        android:textColor="@android:color/holo_orange_light"
+                        android:textSize="14dp"
+                        android:text="500-1000元"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lin_loan"
+                        android:layout_marginTop="5dip"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textSize="14dp"
+                            android:text="借款期限："
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <!--借款期限-->
+                        <TextView
+                            android:id="@+id/tv_term"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2个月"
+                            android:textColor="@android:color/holo_orange_light"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="top|right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:src="@mipmap/newpro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="5dip"
+            android:layout_below="@+id/im_shop"
+            android:background="#dfdddd"
+            android:layout_width="match_parent"
+            android:layout_height="1dip" />
+
+        <TextView
+            android:layout_marginTop="8dip"
+            android:layout_marginBottom="8dip"
+            android:lineSpacingExtra="2dip"
+            android:layout_marginRight="@dimen/x5"
+            android:gravity="center_vertical"
+            android:id="@+id/tv_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv"
+            android:layout_marginLeft="@dimen/x5"
+            android:text="高至额度5万，纯信用，有身份证就行！高至额度5万，纯信用，有身份证就行！"
+            android:textColor="@android:color/black"
+            android:textSize="14dp" />
+
+
+    </LinearLayout>
+
+
+
+</layout>

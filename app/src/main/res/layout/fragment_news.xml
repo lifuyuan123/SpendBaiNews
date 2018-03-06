@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="click"
+            type="com.example.lfy.spendbainews.ui.fragment.NewsFragment"/>
+    </data>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <View
+            android:background="@color/app_theme"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+        <RelativeLayout
+            android:background="@color/app_theme"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_top_bar">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x10"
+                android:src="@mipmap/productlogo"
+                android:layout_width="@dimen/x113"
+                android:layout_height="@dimen/x30" />
+        </RelativeLayout>
+
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tablayout"
+                android:layout_marginLeft="@dimen/x5"
+                android:layout_marginRight="@dimen/x5"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:fillViewport="false"
+                app:tabIndicatorColor="@color/app_theme"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/app_theme"
+                app:tabTextColor="@color/text_gray"
+                app:tabTextAppearance="@style/TabLayoutTextStyle"
+                ></android.support.design.widget.TabLayout>
+        <TextView
+            android:background="@color/underline"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/news_viewpaper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                ></android.support.v4.view.ViewPager>
+
+
+    </LinearLayout>
+
+</layout>

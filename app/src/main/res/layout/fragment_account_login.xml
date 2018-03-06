@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data></data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="15dip">
+
+         <!--手机号-->
+        <com.example.lfy.spendbainews.ui.view.CleanableEditText
+            android:id="@+id/et_name"
+            style="@style/text_Style"
+            android:layout_marginTop="20dip"
+            android:drawableLeft="@mipmap/im_acount"
+            android:drawableRight="@mipmap/im_et_clear"
+            android:hint="手机号"
+            android:textSize="16dp"
+            android:inputType="phone"
+            android:maxLength="13"
+            android:theme="@style/AppEditText" />
+        <!--密码-->
+        <EditText
+            android:id="@+id/et_ps"
+            style="@style/text_Style"
+            android:drawableLeft="@mipmap/im_pw"
+            android:gravity="center_vertical"
+            android:hint="请输入密码"
+            android:textSize="16dp"
+            android:inputType="textPassword"
+            android:theme="@style/AppEditText" />
+        <!--忘记密码-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dip">
+
+            <TextView
+                android:id="@+id/bt_help"
+                style="@style/text_alertStyle"
+                android:layout_alignParentRight="true"
+                android:textSize="14dp"
+                android:text="忘记密码" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>

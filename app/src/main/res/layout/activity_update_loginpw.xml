@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="click"
+            type="com.example.lfy.spendbainews.ui.actvity.UpdateLoginPsActivity"/>
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+
+        <com.example.lfy.spendbainews.ui.view.EaseTitleBar
+            android:id="@+id/ease_titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="true"
+            android:fitsSystemWindows="true"
+            app:titleBarBackground="@color/app_theme"
+            app:titleBarLeftImage="@mipmap/im_back"
+            app:titleBarShowLine="true"
+            app:titleBarTitle="修改密码"
+            >
+
+        </com.example.lfy.spendbainews.ui.view.EaseTitleBar>
+
+
+        <com.example.lfy.spendbainews.ui.view.BounceScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_messageLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="72dip">
+
+
+                        <EditText
+                            android:id="@+id/et_cp"
+                            style="@style/text_Style"
+                            android:drawableLeft="@mipmap/im_cp"
+                            android:hint="验证码"
+                            android:theme="@style/AppEditText" />
+
+
+                        <TextView
+                            android:onClick="@{click.onClick}"
+                            android:id="@+id/bt_cp"
+                            style="@style/bt_cpStyle"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="17dip" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/et_ps"
+                    style="@style/text_Style"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:drawableLeft="@mipmap/im_pw"
+                    android:hint="请输入你的密码"
+                    android:inputType="textPassword"
+                    android:theme="@style/AppEditText" />
+
+
+                <EditText
+                    android:id="@+id/et_cps"
+                    style="@style/text_Style"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip"
+                    android:drawableLeft="@mipmap/im_pw"
+                    android:hint="请再次输入你的密码"
+                    android:theme="@style/AppEditText" />
+
+
+                <Button
+                    android:onClick="@{click.onClick}"
+                    android:id="@+id/bt_updata"
+                    style="@style/bt_goto"
+                    android:text="确定" />
+
+            </LinearLayout>
+
+        </com.example.lfy.spendbainews.ui.view.BounceScrollView>
+
+
+    </LinearLayout>
+</layout>
